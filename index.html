@@ -1,9 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Preview</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {
+margin: 0;
+padding-bottom: 200px;
+}
+a {
+text-decoration: none;
+}
+p {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h { 
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navcont {
+    background-color: #cc6360;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    }
+.navcont > h1 {
+    color: white;
+    text-transform: uppercase;
+    text-decoration-line: overline;
+    text-decoration-thickness: 5px;
+}
+.triangle-container {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+	width: 0;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	border-color: transparent rgb(255, 255, 255) transparent transparent;
+	transform: rotate(90deg);
+	
+	transition: transform 0.5s
+}
+@media (max-width: 767px) {
+    .triangle-container {
+        border-width: 0 40px 40px 0;
+        top: 60px;
+    }
+    .footer a {
+        font-size: 1rem;
+    }
+}
+
+.triangle-container:hover {
+	transform: rotate(-90deg);
+}
+.basecont-cont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #cc6460b4;
+    overflow: hidden;
+    flex-direction: row;
+}
+.basecont {
+    background-color:  #cc64609a;
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.basecont-section {
+    background-color: white;
+    width: 600px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(243, 240, 240, 0.2), 0px 10px 20px rgba(167, 10, 10, 0.2), 0px 15px 30px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 1.4rem;
+    margin-top: 2rem;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+.footer a:last-child {
+    padding-right: 160px;
+}
+.footer a:hover{
+    color: rgb(177, 19, 19);
+    border-radius: 4px;
+    padding: 6px;
+    box-shadow: 0px 2px 4px rgba(243, 240, 240, 0.2), 0px 10px 20px rgba(167, 10, 10, 0.2), 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+.container-container img {
+    display: inline-block;
+    height: 30%;
+}
+.white-image {
+    filter: brightness(0) invert(1);
+}
+</style>
 </head>
 <body>
-	<h1>Präferenzwahl</h1>
+    
+<div class="navcont"><h1>Präferenzwahl</h1></div>
+
+<div class="basecont-cont"><div class="basecont">
+    <div class="basecont-section"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae, omnis eligendi placeat dolorum, ex iusto molestias, at quos dolor fugit vel! Ea reiciendis, explicabo aspernatur sed sit aut quibusdam?</p></div>
+    <div class="basecont-section"><p>test</p></div>
+</div></div>
+
+<div class="footer">
+    <img src="https://www.sektionacht.at/wp-content/uploads/logo-1.png" width="200px" height="60px">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+    <p></p>
+</div>
+
 </body>
 </html>
