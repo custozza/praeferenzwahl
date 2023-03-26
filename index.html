@@ -1,10 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+<style>
+    :root {
+    --mainclr: #d62828;
+    --tclr1: #fb5407e7;
+    --tclr2: #ff006e;
+    --tclr3: #eaf2d7;
+    --tclr4: #005f73;
+    --rbwgradient: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF);
+    --footerheight: 40px;
+    --headerheight: 100px;
+}
+body {
+margin: 0;
+padding-bottom: var(--footerheight);
+}
+a {
+text-decoration: none;
+}
+p {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 { 
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navcont {
+    background-color: var(--mainclr);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--he);
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    }
+.navcont > h1 {
+    color: white;
+    text-transform: uppercase;
+    text-decoration-line: overline;
+    text-decoration-thickness: 5px;
+}
+.triangle-container {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+	width: 0;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	border-color: transparent rgb(255, 255, 255) transparent transparent;
+	transform: rotate(90deg);
+	
+	transition: transform 0.5s
+}
+@media (max-width: 767px) {
+    .triangle-container {
+        border-width: 0 40px 40px 0;
+        top: 60px;
+    }
+    .footer a {
+        font-size: 1rem;
+    }
+}
+.triangle-container:hover {
+	transform: rotate(-90deg);
+}
+.basecont-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, 
+    rgba(255, 0, 0, 0.1), /* Red */
+    rgba(255, 165, 0, 0.1), /* Orange */
+    rgba(255, 255, 0, 0.1), /* Yellow */
+    rgba(0, 128, 0, 0.1), /* Green */
+    rgba(0, 0, 255, 0.1), /* Blue */
+    rgba(75, 0, 130, 0.1), /* Indigo */
+    rgba(238, 130, 238, 0.1) /* Violet */
+);
+    overflow: visible;
+    flex-direction: row;
+}
+.basecont {
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.basecont-section {
+    background-color: white;
+    width: 600px;
+    border-radius: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(243, 240, 240, 0.2), 0px 10px 20px rgba(167, 10, 10, 0.2), 0px 15px 30px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 0 60px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 2rem;
+    display: block;
+    text-align: justify;
+}
+.basecont-section:first-child {
+    margin-top: calc(var(--headerheight) + 30px);
+}
+.basecont-section:first-child,
+.basecont-section:nth-child(odd) {
+    border-bottom-left-radius: 0px;
+    margin-right:20px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.basecont-section:nth-child(even) {
+    border-bottom-right-radius: 0px;
+    margin-left:20px;
+}
+.footer {
+    border-top: 3px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--footerheight);
+    background-color: var(--tclr3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3)
+}
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+.footer a:last-child {
+    padding-right: 160px;
+}
+.footer a:hover{
+    color: var(--mainclr);
+}
+.container-container img {
+    display: inline-block;
+    height: 30%;
+}
+.white-image {
+    filter: brightness(0) invert(1);
+}
+</style>
 </head>
 <body>
-	<h1>Präferenzwahl</h1>
-	<img src="/stimmzettel.gif">
+    
+<div class="navcont"><h1>Präferenzwahl</h1></div>
+
+<div class="basecont-cont"><div class="basecont">
+    <div class="basecont-section"><p>Was ist ein Präferenzwahlsystem?</p></div>
+    <div class="basecont-section"><p>Ein Präferenzwahlsystem, auch bekannt als "Rangfolge-Wahlsystem", ist eine Methode zur Durchführung von Wahlen, bei der die Wählerinnen und Wähler ihre Präferenzen für die Kandidatinnen und Kandidaten in einer bestimmten Reihenfolge angeben. 
+
+        Im Gegensatz zum traditionellen Wahlsystem, bei dem Wählerinnen und Wähler nur eine Stimme abgeben und der Kandidat mit den meisten Stimmen gewinnt, erlaubt das Präferenzwahlsystem den Wählenden, eine Rangliste der Kandidatinnen und Kandidaten zu erstellen, die ihrer Meinung nach am besten geeignet sind. 
+        
+        Das Präferenzwahlsystem kann auf verschiedene Arten umgesetzt werden, aber im Allgemeinen werden die Präferenzen der Wählerinnen und Wähler in einem Verfahren namens "Instant-Runoff" ("Stichwahl") berücksichtigt. Dabei werden zuerst die Kandidatinnen und Kandidaten mit den wenigsten Erstpräferenzen eliminiert und die Stimmen der Wählerinnen und Wähler, die diese Kandidaten als Erstpräferenz gewählt haben, werden den verbleibenden Kandidaten entsprechend ihrer Zweitpräferenzen zugewiesen. 
+        
+        Dieser Prozess wird wiederholt, bis ein Kandidat die erforderliche Anzahl an Stimmen erhält und als Sieger ausgewählt wird. Das Präferenzwahlsystem ermöglicht es den Wählerinnen und Wählern, ihre Meinung präziser auszudrücken und die Wahlergebnisse besser widerzuspiegeln als das traditionelle Wahlsystem. </p></div>
+    <div class="basecont-section"><p>Welche Probleme löst ein Präferenzwahlsystem?</p></div>
+    <div class="basecont-section"><p>Ein Präferenzwahlsystem löst verschiedene Probleme, die im traditionellen Wahlsystem auftreten können. Hier sind einige Beispiele: 
+
+        Verzerrungen durch die Spaltung der Stimmen: Im traditionellen Wahlsystem kann es vorkommen, dass sich die Stimmen auf mehrere Kandidatinnen und Kandidaten aufteilen, die ähnliche politische Standpunkte vertreten. Dadurch kann es passieren, dass ein Kandidat gewinnt, der nur von einer Minderheit unterstützt wird, während die Mehrheit der Wählerinnen und Wähler gegen ihn gestimmt hat. Ein Präferenzwahlsystem löst dieses Problem, indem es den Wählerinnen und Wählern ermöglicht, ihre Präferenzen in einer Rangliste anzugeben, die die Ähnlichkeit zwischen den Kandidatinnen und Kandidaten besser widerspiegelt. 
+        
+        Vermeidung von taktischem Wahlverhalten: Im traditionellen Wahlsystem kann es vorkommen, dass Wählerinnen und Wähler taktisch wählen, d.h. ihre Stimme nicht für ihren bevorzugten Kandidaten abgeben, sondern für einen anderen Kandidaten, der bessere Chancen hat, zu gewinnen. Ein Präferenzwahlsystem löst dieses Problem, indem es den Wählerinnen und Wählern ermöglicht, ihre tatsächlichen Präferenzen auszudrücken, ohne sich Gedanken darüber machen zu müssen, welcher Kandidat die meisten Stimmen erhalten wird. 
+        
+        Mehr Kandidaten und größere Vielfalt: Im traditionellen Wahlsystem kann es schwierig sein, mehrere Kandidatinnen und Kandidaten in eine Wahl zu integrieren, da es schwierig ist, eine Mehrheit für einen Kandidaten zu finden. Ein Präferenzwahlsystem ermöglicht es jedoch, dass mehrere Kandidatinnen und Kandidaten in einer Wahl antreten und bietet den Wählerinnen und Wählern eine größere Vielfalt an politischen Standpunkten zur Auswahl. 
+        
+        Insgesamt löst ein Präferenzwahlsystem einige der Probleme, die im traditionellen Wahlsystem auftreten können, und bietet den Wählerinnen und Wählern eine präzisere Möglichkeit, ihre politischen Präferenzen auszudrücken.</p></div>
+    <div class="basecont-section"><img src="../images/gifs/praefernzwahl-stimmzettel.gif.gif" alt="GIF"></div>
+</div>
+</div>
+
+
+
+<div class="footer">
+    <img src="https://www.sektionacht.at/wp-content/uploads/logo-1.png" width="100px" height="30px">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+    <p></p>
+</div>
+
 </body>
 </html>
