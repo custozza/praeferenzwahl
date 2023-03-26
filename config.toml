@@ -50,3 +50,6 @@ title = "Präferenzwahl"
     
     [params.meta]
         keywords = "präferenzwahl, praeferenzwahl"
+    
+    [params.assets]
+        disableFingerprinting = true

@@ -1,7 +1,6 @@
 ---
 title: "Kontakt"
 weight: 9
-header_menu: true
 ---
 
 {{<icon class="fa fa-envelope">}}&nbsp;[mail@janedoe.com](mailto:your-email@your-domain.com)

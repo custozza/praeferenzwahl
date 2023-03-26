@@ -1,9 +1,6 @@
 ---
 title: "Wie funktioniert's?"
-header_menu_title: "Funktion"
-navigation_menu_title: "Wie funktionierts?"
 weight: 2
-header_menu: true
 ---
 
 Feature notice: This section displays options to customize title:
