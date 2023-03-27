@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-	<title>so einfach</title>
+	<title>#Präferenzwahl - so einfach</title>
 </head>
 
 <style>
@@ -73,6 +73,40 @@
 		padding-bottom: 1rem;
 		padding-top: 1rem;
 	}
+
+	.subtitle {
+		font-weight: 500;
+		color: #333;
+		font-size: 2.2rem;
+		text-align: bo;
+		text-align: -moz-right;
+		letter-spacing: -0.1rem;
+	}
+
+	.voter {
+		font-size: 5rem;
+	}
+
+	.grid-container {
+		grid-template-columns: repeat(2, 1fr);
+		display: inline-grid;
+		position: inherit;
+		bottom: 40px;
+		height: 5rem;
+		margin: 1rem;
+	}
+
+	.test {
+		position: relative;
+	}
+
+	.symbol {
+		/*! height: 1px; */
+		font-size: 3rem;
+		/*! justify-content: center; */
+		text-align: center;
+		border: solid;
+	}
 </style>
 
 <body>
@@ -83,7 +117,33 @@
 		<div id="random-text" class="quote"></div>
 
 
-		<h2>Erklärvideo</h2>
+		<h2>
+			Wer
+			<span style="color: red;">&hearts;</span>
+			<span>&spades;</span>
+			<span style="color: red;">&diams;</span>
+			<span>&clubs;</span>
+			gewinnt?
+		</h2>
+
+		<p class="test"> <span class="voter">&#x1F0A1;</span> und ihre Mitwähler
+			<span class="voter">&#x1F0A2;</span>,
+			<span class="voter">&#x1F0A3;</span>,
+			<span class="voter">&#x1F0A4;</span>,
+			<span class="voter">&#x1F0A5;</span>
+
+			<span>entscheiden in einer Präferenzwahl wer</span>
+
+			<span class="grid-container">
+				<span class="symbol" style="color: red;">&hearts;</span>
+				<span class="symbol">&spades;</span>
+				<span class="symbol">&clubs;</span>
+				<span class="symbol" style="color: red;">&diams;</span>
+			</span>
+
+			gewinnt.
+		</p>
+
 		<div class="left-container-element"><iframe title="YouTube video player"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen="" src="https://www.youtube.com/embed/mBWVyvRrmm4" width="50%" height="auto"
