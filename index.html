@@ -302,10 +302,10 @@
 		</div>
 
 		<div class="cookie-banner">
-			<p>Auf dieser Webseite werden Services von youtube und google docs eingebunden.
-				Ergo legen diese Dienste ihre Cookies bei dir ab. Du bist gewarnt.
-				Durch das klicken auf accept, gibst du ein Einverständnis zu diesen Bedingungen.
-
+			<p>Diese Webseite bindet Services von YouTube und Google Docs ein. 
+				Dadurch können Cookies dieser Dienste bei dir abgelegt werden. 
+				Bitte sei dir dessen bewusst. 
+				Mit dem Klick auf "Accept" erklärst du dich mit diesen Bedingungen einverstanden.
 			</p>
 			<button class="accept-btn">Accept</button>
 			<button class="decline-btn">Decline</button>
@@ -388,7 +388,7 @@
 				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 				expires = "; expires=" + date.toUTCString();
 			}
-			document.cookie = name + "=" + (value || "") + expires + "; path=/";
+			document.cookie = name + "=" + (value || "") + expires + ";  path=/; SameSite=None; Secure";
 		}
 
 		function getCookie(name) {
