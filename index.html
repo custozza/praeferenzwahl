@@ -43,6 +43,21 @@
 		padding-left: 10px;
 		margin: 10px 0;
 	}
+
+	.img-container {
+		position: relative;
+	}
+
+	.img-caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 10px;
+		margin: 0;
+		font-size: smaller;
+	}
 </style>
 
 <body>
@@ -60,7 +75,13 @@
 				frameborder="0"></iframe></div>
 
 
-		<h2>Stimmabgabe</h2><img src="/stimmzettel.gif">
+		<h2>Stimmabgabe</h2>
+		<div class="img-container">
+			<img src="/stimmzettel.gif" alt="stimmzettel">
+			<p class="img-caption">Bei der Präferenzwahl haben Wählerinnen und Wähler die Möglichkeit, ihre
+				Kandidatinnen und Kandidaten in einer Rangliste zu ordnen, um ihre Präferenzen genauer auszudrücken.</p>
+		</div>
+
 
 
 		<h2>Auszählung</h2><img src="/auszaehlung.gif">
