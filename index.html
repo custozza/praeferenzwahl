@@ -10,35 +10,50 @@
 		position: relative;
 		padding: 0 4vw
 	}
-	html {
-    box-sizing: border-box;
-    font-family: Lato,sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
-}
-body {
-    overflow-x: hidden;
-    color: var(--gray90);
-    font-family: Lato,sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.6em;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0;
-    text-rendering: optimizeLegibility;
-    background: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: 'liga' on;
-    font-feature-settings: 'liga1' on
-}
 
+	html {
+		box-sizing: border-box;
+		font-family: Lato, sans-serif;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%
+	}
+
+	body {
+		overflow-x: hidden;
+		color: var(--gray90);
+		font-family: Lato, sans-serif;
+		font-size: 1.5rem;
+		line-height: 1.6em;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: 0;
+		text-rendering: optimizeLegibility;
+		background: #fff;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-moz-font-feature-settings: 'liga' on;
+		font-feature-settings: 'liga1' on
+	}
+
+	.quote {
+		font-style: italic;
+		font-size: 1.2em;
+		color: #555;
+		border-left: 5px solid #ccc;
+		padding-left: 10px;
+		margin: 10px 0;
+	}
 </style>
 
 <body>
 	<main class="outer">
 		<h1>Präferenzwahl</h1>
 		<h2>so einfach</h2>
+
+		<div id="random-text" class="quote"></div>
+
+
+		<h2>Erklärvideo</h2>
 		<div class="left-container-element"><iframe title="YouTube video player"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen="" src="https://www.youtube.com/embed/mBWVyvRrmm4" width="50%" height="auto"
@@ -133,6 +148,27 @@ body {
 
 
 	</main>
+
+	<script>
+		var texts = [
+			"Deine Stimme zählt mehr - Mit Präferenzwahl!"
+			, "Wähle nicht nur einen, sondern alle deine Favoriten - Präferenzwahl macht's möglich!"
+			, "Mehr als nur ein Kreuz - Präferenzwahl ermöglicht deine individuelle Meinungsäußerung!"
+			, "Keine Kompromisse mehr - Mit Präferenzwahl wählst du nach deinem Herzen!"
+			, "Jede Stimme zählt - Präferenzwahl gibt dir eine stärkere Stimme!"
+			, "Wähle klug und effektiv - Präferenzwahl hilft dir dabei!"
+			, "Die Vielfalt deiner Meinungen zählt - Mit Präferenzwahl werden sie alle gehört!"
+			, "Mehr Auswahl, mehr Möglichkeiten - Präferenzwahl gibt dir die Freiheit, deine Stimme zu nutzen!"
+			, "Nicht nur eine Meinung, sondern eine Rangliste - Präferenzwahl gibt dir die volle Kontrolle!"
+			, "Keine Angst vor der Wahl - Präferenzwahl gibt dir die Chance, jeden Kandidaten fair zu bewerten!"
+			, "Mehr Demokratie, mehr Freiheit - Präferenzwahl fördert die Offenheit und Gleichheit der Wahl!"
+			, "Deine Meinung zählt - Präferenzwahl gibt dir die Stimme, um Veränderungen zu bewirken!"
+			, "Präferenzwahl: Der klügere Weg zu wählen!"
+			, "Die Power liegt in deiner Hand - Präferenzwahl gibt dir die Kontrolle über deine Stimme!"
+		];
+		var randomText = texts[Math.floor(Math.random() * texts.length)];
+		document.getElementById("random-text").innerHTML = randomText;
+	</script>
 
 
 
